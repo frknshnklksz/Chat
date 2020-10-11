@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Title</title>
+</head>
+<body onload="disconnect()">
+
+<div class="container">
+    <div>
+        <input type="text" id="from" placeholder="Kullanici Adi"/>
+    </div>
+    <br/>
+    <div>
+        <button id="connect" onclick="connect();">Baglan</button>
+        <button id="disconnect" disabled="disabled" onclick="disconnect();">
+            Cikis
+        </button>
+    </div>
+    <br/>
+    <div id="conversationDiv">
+        <input type="text" id="text" placeholder="Mesaj.."/>
+        <button id="sendMessage" onclick="sendMessage();">Send</button>
+        <p id="response"></p>
+    </div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.js"></script>
+<script type="text/javascript" src="Chat.js"></script>
+</body>
+</html>
